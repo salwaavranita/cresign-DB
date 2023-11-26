@@ -18,7 +18,7 @@ class QuestionFactory extends Factory
     {
         return [
             "question" => $this->faker->sentence(),
-            "category" => $this->faker->randomElement(['Numeric', 'Verbal', 'Logika']),
+            "category" => $this->faker->randomElement(['BAB_1', 'BAB_2', 'BAB_3','BAB_4']),
             "option_a" => $this->faker->word(),
             "option_b" => $this->faker->word(),
             "option_c" => $this->faker->word(),

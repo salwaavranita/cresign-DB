@@ -23,7 +23,7 @@ class StoreQuestionRequest extends FormRequest
     {
         return [
             'question' => 'required|max:255',
-            'category' => 'required|in:Numeric,Verbal,Logika',
+            'category' => 'required|in:BAB_1,BAB_3,BAB_2,BAB_4',
             'option_a' => 'required|max:255',
             'option_b' => 'required|max:255',
             'option_c' => 'required|max:255',

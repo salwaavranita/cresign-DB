@@ -50,17 +50,21 @@
                                 <label class="form-label">Category Question</label>
                                 <div class="selectgroup w-100">
                                     <label class="selectgroup-item">
-                                        <input type="radio" name="category" value="Numeric" class="selectgroup-input"
+                                        <input type="radio" name="category" value="BAB_1" class="selectgroup-input"
                                             checked="">
-                                        <span class="selectgroup-button">Numeric</span>
+                                        <span class="selectgroup-button">BAB 1</span>
                                     </label>
                                     <label class="selectgroup-item">
-                                        <input type="radio" name="category" value="Verbal" class="selectgroup-input">
-                                        <span class="selectgroup-button">Verbal</span>
+                                        <input type="radio" name="category" value="BAB_2" class="selectgroup-input">
+                                        <span class="selectgroup-button">BAB 2</span>
                                     </label>
                                     <label class="selectgroup-item">
-                                        <input type="radio" name="category" value="Logika" class="selectgroup-input">
-                                        <span class="selectgroup-button">Logika</span>
+                                        <input type="radio" name="category" value="BAB_3" class="selectgroup-input">
+                                        <span class="selectgroup-button">BAB 3</span>
+                                    </label>
+                                    <label class="selectgroup-item">
+                                        <input type="radio" name="category" value="BAB_4" class="selectgroup-input">
+                                        <span class="selectgroup-button">BAB 4</span>
                                     </label>
 
                                 </div>

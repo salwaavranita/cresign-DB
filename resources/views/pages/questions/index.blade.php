@@ -13,7 +13,7 @@
             <div class="section-header">
                 <h1>All Questions</h1>
                 <div class="section-header-button">
-                    <a href="{{ route('questions.store') }}" class="btn btn-primary">Add New</a>
+                    <a href="{{ route('questions.create') }}" class="btn btn-primary">Add New</a>
                 </div>
                 <div class="section-header-breadcrumb">
                     <div class="breadcrumb-item active"><a href="#">Dashboard</a></div>
@@ -70,6 +70,7 @@
                                             <th>Option C</th>
                                             <th>Option D</th>
                                             <th>Correct Answer</th>
+                                            <th>Action</th>
                                         </tr>
                                         @foreach ($questions as $question)
                                             <tr>
@@ -97,14 +98,14 @@
                                                 <td>
                                                     {{ $question->correct_answer }}
                                                 </td>
-                                                {{-- <td>
+                                                <td>
                                                     <div class="d-flex justify-content-center">
-                                                        <a href='{{ route('users.edit', $user->id) }}'
+                                                        <a href='{{ route('questions.edit', $question->id) }}'
                                                             class="btn btn-sm btn-info btn-icon">
                                                             <i class="fas fa-edit"></i>
                                                             Edit
                                                         </a>
-                                                        <form action="{{ route('users.destroy', $user->id) }}" method="POST"
+                                                        <form action="{{ route('questions.destroy', $question->id) }}" method="POST"
                                                             class="ml-2" data-confirm-delete="true">
                                                             <input type="hidden" name="_method" value="DELETE" />
                                                             <input type="hidden" name="_token"
@@ -114,7 +115,7 @@
                                                             </button>
                                                         </form>
                                                     </div>
-                                                </td> --}}
+                                                </td>
                                             </tr>
                                         @endforeach
                                     </table>

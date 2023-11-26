@@ -29,6 +29,24 @@ class QuestionController extends Controller
         $data = $request ->all();
         Question::create($data);
         return redirect()->route('questions.index')->with('success', 'Question successfully created');
-
     }
+
+    public function edit(Question $question){
+        $question = Question::findOrFail($question->id);
+        return view('pages.questions.edit', compact('question'));
+    }
+
+    public function update(StoreQuestionRequest $request, Question $question){
+        $data = $request->all();
+        $question->update($data);
+        return redirect()->route('questions.index')->with('success', 'Question successfully updated');
+    }
+
+    public function destroy(Question $question){
+        $question->delete();
+        return redirect()->route('questions.index')->with('success', 'Question successfully deleted');
+    }
+
+
+
 }
